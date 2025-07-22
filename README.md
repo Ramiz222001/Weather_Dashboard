@@ -27,7 +27,6 @@ Weather_Dashboard/
 │   ├── assets/            # Optional images/icons
 │   ├── components/        # Reusable React components
 │   ├── utils/             # API handling (api.js)
-│   ├── styles.css         # Global styles
 │   ├── App.js
 │   ├── index.js
 │   └── ...
