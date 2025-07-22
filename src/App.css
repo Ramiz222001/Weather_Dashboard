@@ -1,0 +1,220 @@
+/* === BASE APP === */
+.app {
+  font-family: system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app.dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* === GLOBAL BUTTONS === */
+.app button {
+  background-color: #eeeeee;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: background 0.3s;
+}
+
+.app button:hover {
+  background-color: #ddd;
+}
+
+.app.dark button {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.app.dark button:hover {
+  background-color: #444;
+}
+
+/* === SPINNER === */
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 4px solid #ccc;
+  border-top-color: #007bff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === ANIMATION === */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RECENT SEARCHES === */
+.recent-search-btn {
+  background-color: #f3f4f6;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.recent-search-btn:hover {
+  background-color: #e2e4e7;
+}
+
+.app.dark .recent-search-btn {
+  background-color: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.app.dark .recent-search-btn:hover {
+  background-color: #444;
+}
+
+/* === SEARCH INPUT/FORM === */
+.search-input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  width: 70%;
+  max-width: 320px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.search-button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.app.dark .search-input {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #555;
+}
+
+.app.dark .search-button {
+  background-color: #444;
+  color: #fff;
+  border-color: #555;
+}
+
+.app.dark .search-button:hover {
+  background-color: #222;
+}
+
+/* === FORECAST CHART CONTAINER === */
+.forecast-chart-container {
+  background-color: #f7f9fc;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s;
+}
+
+.app.dark .forecast-chart-container {
+  background-color: #2b2b2b;
+  border-color: #444;
+}
+
+/* === SUGGESTIONS DROPDOWN === */
+.suggestions-dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 0 0 8px 8px;
+  font-size: 0.95rem;
+}
+
+.suggestions-dropdown li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.suggestions-dropdown li:hover {
+  background-color: #f1f1f1;
+}
+
+.suggestions-dropdown li.highlighted {
+  background-color: #007bff;
+  color: white;
+}
+
+.app.dark .suggestions-dropdown {
+  background-color: #2c2c2c;
+  color: #fff;
+  border-color: #444;
+}
+
+.app.dark .suggestions-dropdown li:hover {
+  background-color: #3a3a3a;
+}
+
+.app.dark .suggestions-dropdown li.highlighted {
+  background-color: #444;
+  color: white;
+}
+
+/* === FLEX SECTION (CHART + FORECAST SIDE-BY-SIDE) === */
+.forecast-section {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.forecast-section > div {
+  min-width: 400px;
+  flex-shrink: 0;
+}
